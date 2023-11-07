@@ -7,7 +7,7 @@ from langchain.vectorstores import FAISS
 from langchain.prompts import PromptTemplate
 from langchain.chains import ConversationChain
 from langchain.memory import VectorStoreRetrieverMemory
-from langchain.embeddings import OpenAIEmbeddings
+from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.text_splitter import CharacterTextSplitter
 
 with st.sidebar:
