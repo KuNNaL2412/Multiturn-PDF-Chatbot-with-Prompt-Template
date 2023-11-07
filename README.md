@@ -1,6 +1,6 @@
 # Multiturn-PDF-Chatbot-with-Prompt-Template
 
-## Task 2- Development of a Multi-Turn Streamlit Chatbot.
+## Development of a Multi-Turn Streamlit Chatbot.
 ## Problem Statement:
 Our primary objective is to develop a Streamlit-based chatbot application that leverages the OpenAI API. This application empowers users to engage in meaningful interactions with textual content extracted from uploaded PDF documents. The central focus of this project is to enable multi-turn conversations with the chatbot while ensuring the preservation of conversation context and history. This functionality is designed to facilitate seamless and interactive information retrieval.
 ## Functional Requirements:
