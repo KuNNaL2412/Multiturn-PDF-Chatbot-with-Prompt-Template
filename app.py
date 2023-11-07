@@ -75,13 +75,13 @@ def main():
             If a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information.
             
             Relevant pieces of previous conversation:
-            {chat_history}
+            {history}
 
             Conversation:
             Human: {input}
             Bot:"""
             PROMPT = PromptTemplate(
-                input_variables=["chat_history", "input"], template=DEFAULT_TEMPLATE
+                input_variables=["history", "input"], template=DEFAULT_TEMPLATE
             )
 
             # Create a Conversation chain
