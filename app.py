@@ -29,7 +29,7 @@ with st.sidebar:
     st.write("Made by Kunal Shripati Pamu")
     
 def main():
-    api_key = st.text_input("Enter your OpenAI API Key")
+    api_key = st.text_input("Enter your OpenAI API Key", type="password")
     if api_key:
         os.environ["OPENAI_API_KEY"] = api_key
         st.header("Multiturn PDF Chatbot")
