@@ -54,18 +54,18 @@ def main():
     
             if os.path.exists(f"{store_name}.pkl"):
                 with open(f"{store_name}.pkl", "rb") as f:
-                    VectorStore = pickle.load(f)
+                    vector_store = pickle.load(f)
             else:
                 embeddings=OpenAIEmbeddings()
-                Vectorstore=FAISS.from_texts(chunks,embedding=embeddings)
+                vector_store=FAISS.from_texts(chunks,embedding=embeddings)
                 with open(f"{store_name}.pkl","wb") as f:
-                    pickle.dump(Vectorstore,f)
+                    pickle.dump(vector_store,f)
             
             # Read user query
             query = st.text_input("Ask question about your PDF file:")
             
             # Initialize retriever, memory and llm for chat history retrieval, storing memory & using OpenAI llm
-            retriever = Vectorstore.as_retriever(search_kwargs=dict(k=3))
+            retriever = vector_store.as_retriever(search_kwargs=dict(k=1))
             memory = VectorStoreRetrieverMemory(retriever=retriever)
             llm = OpenAI(temperature=0)
             
